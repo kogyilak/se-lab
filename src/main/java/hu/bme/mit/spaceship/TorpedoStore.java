@@ -31,6 +31,7 @@ public class TorpedoStore {
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
+      //SonarQube fix: explicitly throw the exception instead of just instantiating it
       throw new IllegalArgumentException("numberOfTorpedos");
     }
 
